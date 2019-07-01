@@ -52,8 +52,9 @@ class RightStack():
         if st.full():
             print "RightStack is full"
         else:
-            st.stack.append(data)
-            st.top=st.top+1
+            if isinstance(data, int):
+                st.stack.append(data)
+                st.top=st.top+1
 
     def r_pop(st):
         if st.empty():
@@ -84,8 +85,9 @@ class LeftStack():
         if st.full():
             print "LeftStack is full"
         else:
-            st.stack.insert(0, data)
-            st.top=st.top+1
+            if isinstance(data, int):
+                st.stack.insert(0, data)
+                st.top=st.top+1
 
     def l_pop(st):
         if st.empty():
